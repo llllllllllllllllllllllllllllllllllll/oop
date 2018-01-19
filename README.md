@@ -5,4 +5,4 @@ All on kirjutatud käsklused ja kirjeldused, mida on vaja jälgida rakenduse koo
 ### Projekti kausta struktuur
 * model - mudeli klassi kataloog
 * views - HTML vaadete kataloog
-* controllers - PHP töötlusskriptide kataloog
+* controllers - PHP töötlusskriptide kataloog   

@@ -45,6 +45,16 @@ class template
         }
     }
 
+    /**
+     * template constructor.
+     * @param string $file
+     */
+    public function __construct($file)
+    {
+        $this->file = $file; //määrame kasutatava malli faili nime
+        $this->loadFile(); //laeme määratud nimega faili sisu
+    }
+
     //HTML malli failist sisu lugemine
     function readFile($file) {
         /*$fp = fopen($file, 'r');
