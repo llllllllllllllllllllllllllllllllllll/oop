@@ -62,4 +62,9 @@ class template
         fclose($fp);*/
         $this->content = file_get_contents($file);
     }
+
+    //malli elemendi nime ja reaalväärtuse paari koostamine ja lisamine $this->vars massiivi sisse
+    function set($name, $value){
+        $this->vars[$name] = $value;
+    }
 }
