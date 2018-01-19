@@ -10,3 +10,8 @@ require_once 'conf.php';
 
 //loome testobjekti template klassist
 $testTabel = new template('test');
+
+//lisan objekti testvaate
+echo '<pre>';
+print_r($testTabel);
+echo '</pre>';
