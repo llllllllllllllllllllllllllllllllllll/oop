@@ -15,8 +15,9 @@ class template
 
     //HTML malli failist sisu lugemine
     function readFile($file) {
-        $fp = fopen($file, 'r');
+        /*$fp = fopen($file, 'r');
         $this->content = fread($fp, filesize($file));
-        fclose($fp);
+        fclose($fp);*/
+        $this->content = file_get_contents($file);
     }
 }
