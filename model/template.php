@@ -67,4 +67,13 @@ class template
     function set($name, $value){
         $this->vars[$name] = $value;
     }
+
+    //täidame mallist loetud sisu reaalsete väärtustega ja anname muudetud sisu tagasi põhiprogrammile
+    function parse(){
+        $str = $this->content; //malli sisu algväärtus
+        foreach ($this->vars as $name=>$value) {
+            $str = str_replace('{'.$name.'}', $value, $str);
+        }
+        return $str;
+    }
 }
