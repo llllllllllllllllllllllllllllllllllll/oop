@@ -5,7 +5,7 @@
  * Date: 19.01.2018
  * Time: 11:09
  */
-//loeme sisse projekti konfiguratsiooni
+/*/loeme sisse projekti konfiguratsiooni
 require_once 'conf.php';
 
 //loome testobjekti template klassist
@@ -19,4 +19,19 @@ $testTabel->set('teine', '2');
 echo '<pre>';
 print_r($testTabel);
 echo '</pre>';
-echo $testTabel->parse();
+echo $testTabel->parse();*/
+
+//loeme sisse projekti konfiguratsiooni
+require_once 'conf.php';
+
+//loome peaobjekti template klassist
+$mainTmpl = new template('main');
+
+//määrame reaalväärtused
+$mainTmpl->set('user', 'Kasutaja');
+$mainTmpl->set('title', 'Lehe pealkiri');
+$mainTmpl->set('lang_bar', 'Pealkiri');
+$mainTmpl->set('menu', '2');
+$mainTmpl->set('content', '1');
+
+echo $mainTmpl->parse();
