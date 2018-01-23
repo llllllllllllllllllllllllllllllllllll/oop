@@ -36,3 +36,8 @@ require_once 'menu.php';
 $mainTmpl->set('content', 'Lehe sisu');
 
 echo $mainTmpl->parse();
+
+//testvaade $http objektist
+echo '<pre>';
+print_r($http);
+echo '</pre>';
