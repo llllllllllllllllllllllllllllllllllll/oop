@@ -6,7 +6,6 @@
  * Time: 11:03
  */
 //loome menüü peamalli objekti template klassist
-require_once 'conf.php';
 $menuTmpl = new template('menu.menu');
 //loome menüü elemendi peamalli objekti template klassist
 $menuItemTmpl = new template('menu.menu_item');
