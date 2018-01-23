@@ -11,13 +11,16 @@ $menuTmpl = new template('menu.menu');
 $menuItemTmpl = new template('menu.menu_item');
 
 //menüü reaalväärtused
-//loome ühe menüü elemendi
+//esimene
 $menuItemTmpl->set('menu_item_name', 'esimene');
 $menuItem = $menuItemTmpl->parse();
-$menuTmpl->set('menu_items', $menuItem);
-echo '<pre>';
-print_r($menuItemTmpl);
-echo '</pre>';
+$menuTmpl->add('menu_items', $menuItem);
+
+//teine
+$menuItemTmpl->add('menu_item_name', 'teine');
+$menuItem = $menuItemTmpl->parse();
+$menuTmpl->add('menu_items', $menuItem);
+
 //täidame loodud elemendiga lehe menüü
 $menuTmpl->set('menu_items', $menuItemTmpl->parse());
 $menu = $menuTmpl->parse();
