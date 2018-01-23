@@ -6,9 +6,10 @@
  * Time: 11:03
  */
 //loome menüü peamalli objekti template klassist
-$menuTmpl = new template(VIEW_DIR.'menu.html');
+require_once 'conf.php';
+$menuTmpl = new template('menu.menu');
 //loome menüü elemendi peamalli objekti template klassist
-$menuItemTmpl = new template(VIEW_DIR.'menu_item.html');
+$menuItemTmpl = new template('menu.menu_item');
 
 //menüü reaalväärtused
 //esimene
