@@ -32,11 +32,10 @@ $mainTmpl->set('page_title', 'Lehe pealkiri');
 $mainTmpl->set('user', 'Kasutaja');
 $mainTmpl->set('title', 'Pealkiri');
 $mainTmpl->set('lang_bar', 'Keeleriba');
-$mainTmpl->set('menu', 'Lehe menüü');
+require_once 'menu.php';
 $mainTmpl->set('content', 'Lehe sisu');
 
 echo $mainTmpl->parse();
 
-//katsetame menüü loomist
-require_once 'menu.php';
+
 
