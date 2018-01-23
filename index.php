@@ -36,6 +36,3 @@ require_once 'menu.php';
 $mainTmpl->set('content', 'Lehe sisu');
 
 echo $mainTmpl->parse();
-
-
-
