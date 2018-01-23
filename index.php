@@ -38,4 +38,6 @@ $mainTmpl->set('content', 'Lehe sisu');
 echo $mainTmpl->parse();
 
 //testvaade $http objektist
-echo HTTP_HOST.SCRIPT_NAME;
+$link = HTTP_HOST.SCRIPT_NAME;
+
+$http->addToLink($link, 'control', 'login');

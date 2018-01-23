@@ -23,5 +23,13 @@ class linkobject extends http
         echo $this->baselink;
     }
 
-
+    //loome paarid kujul nimi=väärtus
+    //ühendame need kokku
+    function addToLink(&$link, $name, $value){
+        if($link != ''){
+            $link = $link.$this->delim;
+        }
+        $link = $link.fixUrl($name).$this->eq.fixUrl($value);
+        echo $link;
+    }
 }
