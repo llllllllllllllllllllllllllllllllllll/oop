@@ -12,3 +12,7 @@ define('CONTROL_DIR', 'controllers/');
 
 //nõuame vajalike failide kasutamist
 require_once MODEL_DIR.'template.php';
+require_once MODEL_DIR.'http.php';
+
+//loome objektid, mida on vaja pidevalt kasutada
+$http = new http();
