@@ -9,3 +9,12 @@
 $menuTmpl = new template('menu.menu');
 //loome menüü elemendi peamalli objekti template klassist
 $menuItemTmpl = new template('menu.menu_item');
+
+//menüü reaalväärtused
+//loome ühe menüü elemendi
+$menuItemTmpl->set('menu_item_name', 'esimene');
+echo '<pre>';
+print_r($menuItemTmpl);
+echo '</pre>';
+//täidame loodud elemendiga lehe menüü
+$menuTmpl->set('menu_items');

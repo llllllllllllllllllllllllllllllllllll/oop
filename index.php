@@ -36,3 +36,7 @@ $mainTmpl->set('menu', 'Lehe menüü');
 $mainTmpl->set('content', 'Lehe sisu');
 
 echo $mainTmpl->parse();
+
+//katsetame menüü loomist
+require_once 'menu.php';
+
