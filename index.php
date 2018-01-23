@@ -31,7 +31,7 @@ $mainTmpl = new template('main');
 $mainTmpl->set('user', 'Kasutaja');
 $mainTmpl->set('title', 'Lehe pealkiri');
 $mainTmpl->set('lang_bar', 'Pealkiri');
-$mainTmpl->set('menu', '2');
-$mainTmpl->set('content', '1');
+$mainTmpl->set('menu', 'Lehe menüü');
+$mainTmpl->set('content', 'Lehe sisu');
 
 echo $mainTmpl->parse();
