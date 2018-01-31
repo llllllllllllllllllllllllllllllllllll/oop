@@ -18,7 +18,7 @@ $menuTmpl->add('menu_items', $menuItem);
 
 
 //loome lingi
-$link = $http->getLink('control', => 'esimene');
+$link = $http->getLink(array('control'=> 'esimene'));
 $menuItem = $menuItemTmpl ->parse();
 
 //teine
@@ -27,7 +27,7 @@ $menuItem = $menuItemTmpl->parse();
 $menuTmpl->add('menu_items', $menuItem);
 
 //loome teise lingi
-$link = $http->getLink('control', => 'esimene');
+$link = $http->getLink(array('control' => 'teine'));
 $menuItem = $menuItemTmpl ->parse();
 
 //täidame loodud elemendiga lehe menüü
