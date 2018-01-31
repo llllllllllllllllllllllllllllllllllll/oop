@@ -13,24 +13,22 @@ $menuItemTmpl = new template('menu.menu_item');
 //menüü reaalväärtused
 //esimene
 $menuItemTmpl->set('menu_item_name', 'esimene');
+$link = $http->getLink(array('control' => 'esimene'));
+$menuItemTmpl->set('link', $link);
 $menuItem = $menuItemTmpl->parse();
 $menuTmpl->add('menu_items', $menuItem);
 
 
-//loome lingi
-$link = $http->getLink(array('control'=> 'esimene'));
-$menuItem = $menuItemTmpl ->parse();
-
 //teine
-$menuItemTmpl->add('menu_item_name', 'teine');
+$menuItemTmpl->set('menu_item_name', 'teine');
+$link = $http->getLink(array('control' => 'teine'));
+$menuItemTmpl->set('link', $link);
 $menuItem = $menuItemTmpl->parse();
 $menuTmpl->add('menu_items', $menuItem);
 
 //loome teise lingi
-$link = $http->getLink(array('control' => 'teine'));
-$menuItem = $menuItemTmpl ->parse();
+
 
 //täidame loodud elemendiga lehe menüü
-$menuTmpl->set('menu_items', $menuItemTmpl->parse());
 $menu = $menuTmpl->parse();
 $mainTmpl->set('menu', $menu);

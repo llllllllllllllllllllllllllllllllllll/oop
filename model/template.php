@@ -13,11 +13,21 @@ class template
     var $content = false; //HTML malli failist loetud sisu
     var $vars = array();//HTML malli elementide ja reaalväärtuste paarid
 
+    /**
+     * template constructor.
+     * @param string $file
+     */
+    public function __construct($file)
+    {
+        $this->file = $file; //määrame kasutatava malli faili nime
+        $this->loadFile(); //laeme määratud nimega faili sisu
+    }
+
     //HTML malli faili nime ja õiguste kontroll
     //ning sisu lugemine siis, kui vajalikud tingimused on täidetud
     function loadFile() {
         if(!is_dir(VIEW_DIR)){
-            echo 'Ei leia '.VIEW_DIR.' kataloogi';
+            echo 'Ei leia '.VIEW_DIR.' kataloogi<br>';
             exit;
         }
         //kui faili nimi on määratud kujul
@@ -35,7 +45,7 @@ class template
         //kui fail asub alamkataloogis views/alamkaust/failinimi.html
         // kui faili nimi on määratud kujul
         //alamkaust.failinimi
-        $file = VIEW_DIR.str_replace('.', '/', $this->file)->file.'.html'; //abiasendus
+        $file = VIEW_DIR.str_replace('.', '/', $this->file).'.html'; //abiasendus
         if(file_exists($file) and is_file($file) and is_readable($file)){
             $this->readFile($file);
         }
@@ -43,16 +53,6 @@ class template
         if($this->content === false){
             echo 'Ei suutnud lugeda '.$this->file.' sisu.</br>';
         }
-    }
-
-    /**
-     * template constructor.
-     * @param string $file
-     */
-    public function __construct($file)
-    {
-        $this->file = $file; //määrame kasutatava malli faili nime
-        $this->loadFile(); //laeme määratud nimega faili sisu
     }
 
     //HTML malli failist sisu lugemine
