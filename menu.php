@@ -16,10 +16,19 @@ $menuItemTmpl->set('menu_item_name', 'esimene');
 $menuItem = $menuItemTmpl->parse();
 $menuTmpl->add('menu_items', $menuItem);
 
+
+//loome lingi
+$link = $http->getLink('control', => 'esimene');
+$menuItem = $menuItemTmpl ->parse();
+
 //teine
 $menuItemTmpl->add('menu_item_name', 'teine');
 $menuItem = $menuItemTmpl->parse();
 $menuTmpl->add('menu_items', $menuItem);
+
+//loome teise lingi
+$link = $http->getLink('control', => 'esimene');
+$menuItem = $menuItemTmpl ->parse();
 
 //täidame loodud elemendiga lehe menüü
 $menuTmpl->set('menu_items', $menuItemTmpl->parse());
