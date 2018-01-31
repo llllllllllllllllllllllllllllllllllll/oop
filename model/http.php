@@ -37,4 +37,14 @@ class http
             }
         }
     }
+
+    //loome funktsiooni mis loeb lingist andmed
+    //control=esimene, siis $this->vars['control'] väärtus oleks 'esimene'
+    function get($name) {
+        if(isset($this->vars[$name])) {
+            return $this->vars[$name];
+        } else {
+            return false;
+        }
+    }
 }
