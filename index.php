@@ -39,5 +39,12 @@ echo $mainTmpl->parse();
 
 //testvaade $http objektist
 $link = HTTP_HOST.SCRIPT_NAME;
-
+$pairs = array(
+    'control' => 'login',
+    'user' => 'test';
+)
+    $link = '';
+foreach($pairs as $name => $value) {
+    $http ->addToLink($link, $name, $value);
+}
 $http->addToLink($link, 'control', 'login');
