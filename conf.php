@@ -21,6 +21,9 @@ require_once MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';
 require_once MODEL_DIR.'linkobject.php';
 require_once MODEL_DIR.'mysql.php';
-
+require_once 'db_conf.php';
 //loome objektid, mida on vaja pidevalt kasutada
 $http = new linkobject();
+
+// andmebaasi objekt
+$db = new mysql(DB_HOST, DB_USER, DB_PASS, DB_NAME);
