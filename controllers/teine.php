@@ -6,4 +6,4 @@
  * Time: 9:46
  */
 
-$mainTmpl->set('content', 'Lehe sisu');
+$mainTmpl->set('content', 'Teine leht');
