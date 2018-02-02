@@ -11,6 +11,11 @@ $menuTmpl = new template('menu.menu');
 $menuItemTmpl = new template('menu.menu_item');
 
 //menüü reaalväärtused
+$menuItemTmpl->set('menu_item_name', 'Avaleht');
+$link = $http->getLink(array('control' => 'avaleht'));
+$menuItemTmpl->set('link', $link);
+$menuItem = $menuItemTmpl->parse();
+$menuTmpl->add('menu_items', $menuItem);
 //esimene
 $menuItemTmpl->set('menu_item_name', 'esimene');
 $link = $http->getLink(array('control' => 'esimene'));
