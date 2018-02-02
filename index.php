@@ -34,6 +34,7 @@ $mainTmpl->set('page_title', 'Lehe pealkiri');
 $mainTmpl->set('user', 'Kasutaja');
 $mainTmpl->set('title', 'Pealkiri');
 $mainTmpl->set('lang_bar', 'Keeleriba');
+$mainTmpl->set('content', 'Lehe vaikimisi sisu');
 require_once 'menu.php';
 
 echo $mainTmpl->parse();
