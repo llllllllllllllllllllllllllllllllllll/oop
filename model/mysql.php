@@ -34,11 +34,21 @@ class mysql
     //funktsioon db serveriga ühenduse loomiseks
     function connect(){
         $this->conn = mysqli_connect($this->host, $this->user, $this->pass, $this->dbname);
-        //if($this->conn == false) {
-         //   echo 'probleem andmebaasi ühendamisega<br>';
-        //    exit;
-        //}
+        if($this->conn == false) {
+           echo 'probleem andmebaasi ühendamisega<br>';
+            exit;
+        }
     }
 
+    //funktsioon päringu edastamiseks
+    function query($sql){
+        $result = mysqli_query($this->conn, $sql);
+        if ($result = false){
+            echo 'probleem päringuga<br>';
+            echo '<b>'.$sql.'</b>';
+            return false;
+        }
+        return $result;
+    }
 
 }
