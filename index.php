@@ -22,6 +22,7 @@ require_once 'menu.php';
 
 echo $mainTmpl->parse();
 //kontrollime db objekti sisu
-//echo '<pre>';
-//print_r($db);
-//echo'</pre>';
+/*$result = $db->getData('select now();');
+echo '<pre>';
+print_r($result);
+echo'</pre>';*/

@@ -58,7 +58,7 @@ class mysql
         while ($row = mysqli_fetch_assoc($result)){
             $data[] = $row;
         }
-        if (count($data)=0){
+        if (count($data)==0){
             return false;
         } else {
             return $data;
