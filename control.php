@@ -6,8 +6,7 @@
  * Time: 9:36
  */
 
-$control = $http->get($control); //saame teada, millise nimega kontrollerit on vaja
-
+$control = $http->get('control'); //saame teada, millise nimega kontrollerit on vaja
 //koostame vastava faili nime
 $file =CONTROL_DIR.$control.'.php';
 if (file_exists($file) and is_file($file) and is_readable($file)) {

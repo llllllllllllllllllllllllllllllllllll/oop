@@ -10,7 +10,7 @@ class template
 {
     //klassi muutujad
     var $file = ''; //HTML malli faili nimi
-    var $content = false; //HTML malli failist loetud sisu
+    var $content = ''; //HTML malli failist loetud sisu
     var $vars = array();//HTML malli elementide ja reaalväärtuste paarid
 
     /**

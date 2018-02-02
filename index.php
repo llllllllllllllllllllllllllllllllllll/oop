@@ -22,5 +22,7 @@ require_once 'menu.php';
 
 echo $mainTmpl->parse();
 
-//kontrollime control sisu
-echo $http->get('control');
+//kontrollime db objekti sisu
+//echo '<pre>';
+//print_r($db);
+//echo'</pre>';
