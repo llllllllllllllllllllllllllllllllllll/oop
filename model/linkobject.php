@@ -40,7 +40,7 @@ class linkobject extends http
         }
         //siin paarid name=value&name1=value1 on olemas
         if($link != ''){
-            $this->baselink.'?'.$link;
+            $link = $this->baselink.'?'.$link;
         } else {
             //kui paarid ei ole moodustatud
             $link = $this->baselink;

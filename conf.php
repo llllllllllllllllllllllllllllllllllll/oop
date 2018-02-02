@@ -20,6 +20,7 @@ require_once LIB_DIR.'utils.php';
 require_once MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';
 require_once MODEL_DIR.'linkobject.php';
+require_once MODEL_DIR.'mysql.php';
 
 //loome objektid, mida on vaja pidevalt kasutada
 $http = new linkobject();
