@@ -20,7 +20,6 @@ class linkobject extends http
     {
         parent::__construct();
         $this->baselink = $this->protocol.HTTP_HOST.SCRIPT_NAME;
-        echo $this->baselink;
     }
 
     //loome paarid kujul nimi=väärtus
