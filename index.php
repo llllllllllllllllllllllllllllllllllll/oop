@@ -22,7 +22,7 @@ require_once 'menu.php';
 
 echo $mainTmpl->parse();
 //kontrollime db objekti sisu
-$result = $db->getData('SELECT NOW()');
+$result = $db->getData("select 'mingi tekst'");
 echo '<pre>';
 print_r($result);
 echo '</pre>';

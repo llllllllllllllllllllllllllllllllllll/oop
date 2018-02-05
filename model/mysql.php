@@ -43,7 +43,7 @@ class mysql
     //funktsioon päringu edastamiseks
     function query($sql){
         $result = mysqli_query($this->conn, $sql);
-        if ($result = false){
+        if ($result == false){
             echo 'probleem päringuga<br>';
             echo '<b>'.$sql.'</b>';
             return false;
@@ -58,7 +58,7 @@ class mysql
         while ($row = mysqli_fetch_assoc($result)){
             $data[] = $row;
         }
-        if (count($data)==0){
+        if (count($data) == 0){
             return false;
         } else {
             return $data;
