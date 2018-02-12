@@ -22,9 +22,7 @@ require_once 'menu.php';
 
 echo $mainTmpl->parse();
 // kontrollime db objekti sisu
--$db->query('SELECT NOW()');
-+$result = $db->getData('SELECT NOW()');
+$result = $db->getData('SELECT NOW()');
 echo '<pre>';
--print_r($db);
-+print_r($result);
+print_r($result);
 echo '</pre>';
