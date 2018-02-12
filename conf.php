@@ -16,6 +16,11 @@ define('DEFAULT_CONTROL', 'default');//vaikimisi kasutatav kontroller
 //nõuame abifunktsioonide faili kasutamist
 require_once LIB_DIR.'utils.php';
 
+// määrame erinevad rollid
+define('ROLE_NONE', 0);
+define('ROLE_USER', 1);
+define('ROLE_ADMIN', 2);
+
 //nõuame vajalike failide kasutamist
 require_once MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';
