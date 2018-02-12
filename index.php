@@ -21,8 +21,3 @@ $mainTmpl->set('lang_bar', 'Keeleriba');
 require_once 'menu.php';
 
 echo $mainTmpl->parse();
-// kontrollime db objekti sisu
-$result = $db->getData('SELECT NOW()');
-echo '<pre>';
-print_r($result);
-echo '</pre>';
