@@ -23,6 +23,6 @@ if($result != false){
         // siis tulemus koosneb ainult 1-st reast -
         // see ongi vastava lehe sisu
         $page = $result[0];
-        $http->set('page_id', $page['content_id']});
+        $http->set('page_id', $page['content_id']);
         $mainTmpl->set('content', $page['content']);
     }
