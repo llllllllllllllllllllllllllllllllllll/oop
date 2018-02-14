@@ -26,7 +26,7 @@ require_once MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';
 require_once MODEL_DIR.'linkobject.php';
 require_once MODEL_DIR.'mysql.php';
-require_once MODEL_DIR.'session.php'
+require_once MODEL_DIR.'session.php';
 //vajalikud abikonfiguratsiooni failid
 require_once 'db_conf.php';
 //loome objektid, mida on vaja pidevalt kasutada
