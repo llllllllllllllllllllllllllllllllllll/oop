@@ -14,7 +14,7 @@ $loginForm->set('nupp', 'Logi sisse!');
 
 // loome link vorm töötluseks
 $link = $http->getLink(array('control'=>'login_do'));
-$loginForm->set('link', $link)
+$loginForm->set('link', $link);
 
 // paneme väärtused malli
 // selleks oleks vaja trükida välja
