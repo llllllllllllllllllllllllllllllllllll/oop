@@ -5,7 +5,6 @@
  * Date: 31.01.18
  * Time: 9:46
  */
-
 $page_id = (int)$http->get('page_id'); // lehe id
 // lehe id järgi küsime sisu andmebaasist
 $sql = 'SELECT * FROM content '.

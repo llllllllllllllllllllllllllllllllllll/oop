@@ -22,6 +22,10 @@ $result = $db->getData($sql);
 //kontrollime kas andmed on olemas
 if($result != false) {
     //kasutajale tuleb avada töösessioon
+    session_start();
+    echo session_id().'<br>';
+    $_SESSION['username'] = $username;
+
     echo 'Oled sisse logitud<br>';
 } else {
     //tuleb kasutaja tagasi suunata sisselogimisvormile
