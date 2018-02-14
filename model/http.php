@@ -52,4 +52,14 @@ class http
     function set($name, $value){
         $this->vars[$name] = $value;
     }
+
+    //suunab skripti vastavale lehele
+    function redirect($url = false) {
+        if($url != false) {
+            $this->getLink();
+        }
+        $url = str_replace('&amp;', '&', $url);
+        header('Location: '.$url);
+        exit;
+    }
 }
