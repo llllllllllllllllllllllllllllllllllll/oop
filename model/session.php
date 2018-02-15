@@ -64,4 +64,54 @@ class session
         $this->db->query($sql);
     }
 
+    //sessiooni andmete kontroll
+    function checkSession() {
+        $this->clearSessions();
+        //kui sid pole ja on lubatud anonüümne kasutaja
+        if($this->sid === false and $this->anonymous === true) {
+            $this->sessionCreate();
+        }
+        //kui sid on juba olemas
+        if($this->sid != false) {
+            //loeme kõik andmed, mis on antud
+            //sessiooniga seotud
+            $sql = 'SELECT * FROM session WHERE'.
+                'sid='.fixDb($this->sid);
+            $result = $this->db->getData($sql);
+            //kui andmed ei tulnud
+            if($result == false) {
+                //siis vaatame, kui anonüümne kasutaja on lubatud
+                if($this->anonymous) {
+                    //loome anonüümse sessiooni
+                    $this->sessionCreate();
+                    define('USER_ID', 0);
+                    define('ROLE_ID', 0);
+                } else {
+                    //kui anonüümne ei ole lubatud
+                    $this->sid = false;
+                    //nüüd tuleb kustutada sid ka $http objektist
+                    //veel ei ole lahendatud
+
+                }
+            } else {
+                //saime andmed andmebaasist
+                //valmistame andmetest sessiooni andmed
+                $vars = unserialize($result[0]['svars']);
+                //kui andmed ei ole massiivi kujul, teisendan massiiviks
+                if(!is_array($vars)) {
+                    $vars = array();
+                }
+                 $this->vars=$vars;
+                //kasutaja andmete töötlus
+                $user_data = unserialize($result[0]['user_data']);
+                define('USER_ID', $user_data['user_id']);
+                define('ROLE_ID', $user_data['role_id']);
+                $this->user_data = $user_data;
+            }
+        } else {
+            define('USER_ID', 0);
+            define('ROLE_ID', 0);
+        }
+    }
+
 }
