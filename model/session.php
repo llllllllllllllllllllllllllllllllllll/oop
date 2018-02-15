@@ -24,7 +24,7 @@ class session
     {
         $this->http = &$http;
         $this->db = &$db;
-        $this->sessionCreate();
+        $this->clearSessions();
     }
 
     //loome sessiooni
@@ -54,6 +54,14 @@ class session
             //et nad oleks veebis kättesaadavad
             $this->http->set('sid', $sid);
         }
+    }
+
+    //funktsioon hakkab kustutama sessioone db tabelist
+    function clearSessions() {
+        $sql = 'DELETE FROM session WHERE '.
+        time().' - UNIX_TIMESTAMP(changed) > '.
+        $this->timeout;
+        $this->db->query($sql);
     }
 
 }

@@ -37,6 +37,6 @@ $db = new mysql(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 //sessiooni objekt
 $sess=new session($http, $db);
-echo '<pre>';
-print_r($sess);
-echo '</pre>';
+//echo '<pre>';
+//print_r($sess);
+//echo '</pre>';
